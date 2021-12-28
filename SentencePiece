@@ -73,7 +73,7 @@ def make_reply():
     import sentencepiece as spm
     import os
 
-    text_file = 'lineTalk3.txt'
+    text_file = 'lineTalk2.txt'
     person_name = '齊藤 悠悟'
 
     coupus = read_text(text_file)
