@@ -45,25 +45,25 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    # line_bot_api.reply_message(
-    #     event.reply_token,
-    #     TextSendMessage(text="やぁ!"))
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text="やぁ!"))
 
-    # line_bot_api.reply_message(
-    #     event.reply_token,
-    #     TextSendMessage(text=event.message.text))
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=event.message.text))
 
-    try:
-        reply_text = make_reply()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=reply_text))
-    except BaseException:
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text="返信失敗"))
-    finally:
-        print("ooooooooooo")
+    # try:
+    #     reply_text = make_reply()
+    #     line_bot_api.reply_message(
+    #         event.reply_token,
+    #         TextSendMessage(text=reply_text))
+    # except BaseException:
+    #     line_bot_api.reply_message(
+    #         event.reply_token,
+    #         TextSendMessage(text="返信失敗"))
+    # finally:
+    #     print("ooooooooooo")
 
 
 if __name__ == "__main__":
