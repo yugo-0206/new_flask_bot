@@ -47,15 +47,15 @@ def callback():
 def handle_message(event):
 
     # get request body as text
-    body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body)
-    print("----1----")
-    print(body)
-    print("----2----")
+    # body = request.get_data(as_text=True)
+    # app.logger.info("Request body: " + body)
+    # print("----1----")
+    # print(body)
+    # print("----2----")
 
-    # line_bot_api.reply_message(
-    #     event.reply_token,
-    #     TextSendMessage(text="やぁ!"))
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text="やぁ!"))
 
     # line_bot_api.reply_message(
     #     event.reply_token,
