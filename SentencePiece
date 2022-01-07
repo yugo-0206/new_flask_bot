@@ -68,7 +68,7 @@ def generate_sentence2(model):
     return result
 
 
-def make_reply():
+def reply():
     import codecs
     import sentencepiece as spm
     import os
