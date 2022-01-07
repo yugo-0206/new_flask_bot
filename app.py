@@ -45,9 +45,17 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text="やぁ!"))
+
+    # get request body as text
+    body = request.get_data(as_text=True)
+    app.logger.info("Request body: " + body)
+    print("----1----")
+    print(body)
+    print("----2----")
+
+    # line_bot_api.reply_message(
+    #     event.reply_token,
+    #     TextSendMessage(text="やぁ!"))
 
     # line_bot_api.reply_message(
     #     event.reply_token,
